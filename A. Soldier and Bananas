@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int k,n,w;
+ 
+    cin>>k>>n>>w;
+       int c=k;
+    for(int i=2;i<=w;i++){
+        int t=c*i;
+        k+=t;
+       
+    }
+    
+    k=k-n;
+    if(k<0){
+        cout<<0;
+        return 0;
+    }
+    
+    cout<<k;
+}
