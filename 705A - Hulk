@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    
+    map<int,string>m;
+    m[0]="I hate ";
+    m[1]="I love ";
+    
+    vector<string>v;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+             v.push_back(m[0]);
+             
+             if(i==n-1){
+                 v.push_back("it");
+             }
+        }
+        if(i+1<n && i%2==0){
+        v.push_back("that ");
+
+        }
+        if(i%2!=0){
+            v.push_back(m[1]);
+              if(i+1<n ){
+            v.push_back("that ");
+
+             }
+             else{
+                 v.push_back("it");
+             }
+        }
+        
+        
+    }
+    
+    for(auto u:v){
+        cout<<u;
+    }
+}
