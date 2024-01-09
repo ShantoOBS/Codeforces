@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,x,p;
+    cin>>n;
+    cin>>x;
+   
+   set<int>s;
+    for(int i=0;i<x;i++){
+       int a;
+       cin>>a;
+       if(a!=0)
+       s.insert(a);
+    }
+    cin>>p;
+    
+     for(int i=0;i<p;i++){
+       int a;
+       cin>>a;
+       if(a!=0)
+       s.insert(a);
+    }
+
+    if(s.size() ==n ){
+        cout<<"I become the guy.";
+    }
+    else{
+        cout<<"Oh, my keyboard!";
+    }
+    
+    
+    
+}
