@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int k,l,m,n,d;
+    cin>>k>>l>>m>>n>>d;
+    
+    vector<bool>v(d+1,false);
+    
+    for(int i=1;i<=d;i++){
+        
+        if(i%k==0){
+            v[i]=true;
+        }
+        if(i%l==0){
+            v[i]=true;
+        }
+        if(i%m==0){
+            v[i]=true;
+        }
+        if(i%n==0){
+            v[i]=true;
+        }
+         
+            
+    }
+    
+   
+    int c=-1;
+    for(auto u:v){
+        if(u==false){
+            c++;
+        }
+    }
+     cout<<d-c;
+}
