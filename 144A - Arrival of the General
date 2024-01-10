@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v,v1;
+    while(n--){
+        int soldires;
+        cin>>soldires;
+        v.push_back(soldires);
+        v1.push_back(soldires);
+    }
+    sort(v.begin(),v.end());
+    int maxvalue=v[v.size()-1];
+    int minvalue=v[0];
+    
+ 
+    int i=0;
+    while(i<v1.size()){
+        if(maxvalue==v1[i]){
+            break;
+        }
+        i++;
+    }
+    
+    
+    int first=i;
+    int j=v1.size()-1;
+     while(j>=0){
+        if(minvalue==v1[j]){
+            break;
+        }
+        j--;
+    }
+    
+    if(i>j){
+        j+=1;
+    }
+    
+    
+    int second=v1.size()-1-j;
+    
+    cout<<first+second;
+    
+}
