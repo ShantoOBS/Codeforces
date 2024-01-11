@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    
+    int n;
+    cin>>n;
+    
+   int arr[]={100,20,10,5,1};
+   int size=sizeof(arr)/sizeof(int);
+   int c=0,i=0;
+   while(i<size){
+       
+       if(arr[i]<=n){
+          
+           c++;
+           n=n-arr[i];
+          
+       }
+       else{
+           i++;
+       }
+   }
+   
+   cout<<c;
+}
