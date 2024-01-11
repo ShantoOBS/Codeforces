@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+   vector<int>v;
+   int ans;
+   
+   for(int i=0;i<n;i++){
+       int m;
+       cin>>m;
+       v.push_back(m);
+   }
+   int even=0,odd=0;
+   for(int i=0;i<n;i++){
+       if(v[i]%2==0){
+           even++;
+       }
+       else{
+           odd++;
+       }
+   }
+   if(even>odd){
+       for(int i=0;i<n;i++){
+           if(v[i]%2==1){
+               ans=i;
+               break;
+           }
+       }
+   }
+   
+   if(even<odd){
+       for(int i=0;i<n;i++){
+           if(v[i]%2==0){
+               ans=i;
+               break;
+           }
+       }
+   }
+   
+   cout<<ans+1;
+   
+   
+   
+   
+    
+}
