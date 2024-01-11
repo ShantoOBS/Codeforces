@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int ans=0;
+    map<string,int>m;
+    m.insert(make_pair("Icosahedron",20));
+     m.insert(make_pair("Cube",6));
+      m.insert(make_pair("Tetrahedron",4));
+       m.insert(make_pair("Dodecahedron",12));
+        m.insert(make_pair("Octahedron",8));
+        
+        for(int i=0;i<n;i++){
+            string s;
+            cin>>s;
+            if(s=="Icosahedron"){
+                ans+=m["Icosahedron"];
+                
+            }
+            
+            if(s=="Cube"){
+                ans+=m["Cube"];
+                
+            }
+            
+            if(s=="Tetrahedron"){
+                ans+=m["Tetrahedron"];
+                
+            }
+            
+            if(s=="Dodecahedron"){
+                ans+=m["Dodecahedron"];
+                
+            }
+            if(s=="Octahedron"){
+                ans+=m["Octahedron"];
+                
+            }
+        }
+        
+        cout<<ans;
+}
