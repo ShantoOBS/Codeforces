@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s,s1,s2;
+    cin>>s>>s1>>s2;
+    
+    multiset<char>ss1,ss2;
+    
+    vector<char>v1,v2;
+    
+    for(int i=0;i<s.length();i++){
+        ss1.insert(s[i]);
+    }
+    for(int i=0;i<s1.length();i++){
+        ss1.insert(s1[i]);
+    }
+    for(int i=0;i<s2.length();i++){
+        ss2.insert(s2[i]);
+    }
+    
+    
+
+    for(auto u:ss1){
+        
+        v1.push_back(u);
+    }
+    
+    
+     for(auto u:ss2){
+        
+        v2.push_back(u);
+    }
+    
+    for(int i=0;i<v1.size() || i<v2.size();i++){
+        if(v1[i]!=v2[i]){
+            cout<<"NO";
+            return 0;
+        }
+    }
+    
+    cout<<"YES";
+
+}
