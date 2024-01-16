@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(){
+
+
+   
+     int m;
+     cin>>m;
+     vector<int>v(m);
+     vector<int>f(101,0);
+   for(int i=0;i<m;i++){
+       
+       cin>>v[i];
+       f[v[i]]++;
+       
+   }
+   
+       for(int i=0;i<f.size();i++){
+           if(f[v[i]]==1){
+               cout<<i+1<<endl;
+               break;
+           }
+       }
+       
+       
+       
+       
+       
+}
+       
+       
+      
+
+int main()
+{
+    
+    long long n;
+    cin >>n;
+    
+  
+   
+   while(n--){
+  
+       solve();
+      
+   }
+       
+   
+   
+  
+ 
+  
+    
+    
+}
