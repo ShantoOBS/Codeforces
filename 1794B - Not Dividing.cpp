@@ -6,21 +6,24 @@ int main(){
 	int t; cin >> t;
 	for(int test_number = 0; test_number < t; test_number++){
 		int n; cin >> n;
-		vector <string> long_subs;
-		for(int i = 0; i < 2 * n - 2; i++){
-			string s; 
-			cin >> s;
-			if((int)s.size() == n - 1){
-				long_subs.push_back(s);
+		vector <int> a(n);
+		for(int i = 0; i < n; i++){
+			cin >> a[i];
+		}
+		for(int i = 0; i < n; i++){
+			if(a[i] == 1){
+				a[i]++;
 			}
 		}
-		reverse(long_subs[1].begin(), long_subs[1].end());
-		if(long_subs[0] == long_subs[1]){
-			cout<<"YES\n";
-		}else{
-			cout<<"NO\n";
+		for(int i = 1; i < n; i++){
+			if(a[i] % a[i - 1] == 0){
+				a[i]++;
+			}
 		}
+		for(auto i : a){
+			cout << i << " ";
+		}
+		cout << "\n";
 	}
-	
 	return 0;
 }
